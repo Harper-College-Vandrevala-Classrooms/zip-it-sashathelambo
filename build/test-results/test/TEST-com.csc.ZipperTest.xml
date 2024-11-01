@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.csc.ZipperTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-11-01T17:52:15" hostname="ALEXTHELAMBO" time="0.016">
+<testsuite name="com.csc.ZipperTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-11-01T18:11:21" hostname="ALEXTHELAMBO" time="0.018">
   <properties/>
-  <testcase name="testZipIntegers()" classname="com.csc.ZipperTest" time="0.014"/>
+  <testcase name="testZipIntegers()" classname="com.csc.ZipperTest" time="0.013"/>
+  <testcase name="testHashmapifyDifferentSizes()" classname="com.csc.ZipperTest" time="0.001"/>
+  <testcase name="testHashmapify()" classname="com.csc.ZipperTest" time="0.001"/>
   <testcase name="testZipStrings()" classname="com.csc.ZipperTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

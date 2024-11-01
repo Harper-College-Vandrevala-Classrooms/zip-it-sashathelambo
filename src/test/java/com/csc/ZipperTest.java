@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
@@ -23,5 +24,20 @@ public class ZipperTest {
     List<String> list2 = Arrays.asList("b", "d", "f");
     List<String> expected = Arrays.asList("a", "b", "c", "d", "e", "f");
     assertEquals(expected, Zipper.zip(list1, list2));
+  }
+
+  @Test
+  void testHashmapify() {
+    List<String> keys = Arrays.asList("one", "two", "three");
+    List<Integer> values = Arrays.asList(1, 2, 3);
+    Map<String, Integer> expected = Map.of("one", 1, "two", 2, "three", 3);
+    assertEquals(expected, Zipper.hashmapify(keys, values));
+  }
+
+  @Test
+  void testHashmapifyDifferentSizes() {
+    List<String> keys = Arrays.asList("one", "two");
+    List<Integer> values = Arrays.asList(1, 2, 3);
+    assertThrows(IllegalArgumentException.class, () -> Zipper.hashmapify(keys, values));
   }
 }

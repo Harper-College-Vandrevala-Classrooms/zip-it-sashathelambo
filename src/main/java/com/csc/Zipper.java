@@ -1,7 +1,10 @@
      package com.csc;
 
     import java.util.ArrayList;
-    import java.util.List;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
     public class Zipper {
         public static <T> List<T> zip(List<T> list1, List<T> list2) {
             List<T> merged = new ArrayList<>();
@@ -14,6 +17,17 @@
             merged.addAll(list1.subList(i, list1.size()));
             merged.addAll(list2.subList(i, list2.size()));
             return merged;
+        }
+
+        public static <T> Map<String, T> hashmapify(List<String> keys, List<T> values) {
+            if (keys.size() != values.size()) {
+                throw new IllegalArgumentException("The two lists must have the same size.");
+            }
+            Map<String, T> map = new HashMap<>();
+            for (int i = 0; i < keys.size(); i++) {
+                map.put(keys.get(i), values.get(i));
+            }
+            return map;
         }
 
         public static void main(String[] args) {
